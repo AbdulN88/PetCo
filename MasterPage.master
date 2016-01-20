@@ -1,0 +1,297 @@
+@@ -0,0 +1,296 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Protected Sub TreeView1_SelectedNodeChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Protected Sub TextBox3_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Protected Sub Button3_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+      
+        
+    End Sub
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style14
+        {
+            height: 116px;
+        }
+        .style20
+        {
+            width: 1184px;
+            height: 1056px;
+        }
+        .style26
+        {
+            width: 275px;
+            }
+        .style28
+        {
+            width: 699px;
+            text-align: justify;
+        }
+        .style29
+        {
+            width: 196px;
+        }
+        .style30
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body bgcolor="White">
+    <form id="form1" runat="server">
+    <div style="height: 23px">
+    </div>
+    <table class="style20">
+        <tr>
+            <td class="style14" colspan="3">
+                <img alt="" src="Images/website_banner_petco.jpg" 
+                    style="height: 164px; width: 1203px" /></td>
+        </tr>
+        <tr>
+            <td bgcolor="#D5EAFF" class="style29">
+                <asp:Menu ID="Menu5" runat="server" ForeColor="White" Orientation="Horizontal" 
+                    style="position: absolute; top: 166px; left: 17px; height: 32px; width: 233px; z-index: 1">
+                    <StaticHoverStyle BackColor="#CCFF66" />
+                    <Items>
+                        <asp:MenuItem Text="Register With PetCo" Value="Register With PetCo" 
+                            NavigateUrl="~/register pg.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Help &amp; Advice" Value="Help &amp; Advice" 
+                            NavigateUrl="~/help advice.aspx"></asp:MenuItem>
+                    </Items>
+                    <StaticItemTemplate>
+                        <%# Eval("Text") %>&nbsp; /
+                    </StaticItemTemplate>
+                </asp:Menu>
+                <asp:Panel ID="Panel2" runat="server" Height="84px" 
+                    style="color: #0000FF; position: absolute; top: 347px; left: 40px" 
+                    Width="204px">
+                    <div class="style30">
+                        Book a Appointment By Phone&nbsp;&nbsp;&nbsp; <b>Call: 0845 535 4933</b><br />
+                        Automatically Directed to Your Local PetCo Branch</div>
+                </asp:Panel>
+                <asp:TreeView ID="TreeView1" runat="server" ImageSet="Arrows" 
+                    LineImagesFolder="~/TreeLineImages" 
+                    onselectednodechanged="TreeView1_SelectedNodeChanged" ShowLines="True" 
+                    Width="260px" 
+                    
+                    style="font-size: x-large; font-weight: 700; vertical-align: text-top; letter-spacing: 2px; font-family: 'Times New Roman', Times, serif; position: relative; top: -31px; left: 17px; width: 261px; text-align: justify; height: 306px">
+                    <ParentNodeStyle Font-Bold="False" />
+                    <LevelStyles>
+                        <asp:TreeNodeStyle Font-Underline="False" NodeSpacing="23px" />
+                    </LevelStyles>
+                    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" BackColor="#66FF66" />
+                    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" 
+                        HorizontalPadding="0px" VerticalPadding="0px" />
+                    <Nodes>
+                        <asp:TreeNode Text="Petco Home" Value="New Node" NavigateUrl="~/Home Page.aspx"></asp:TreeNode>
+                        <asp:TreeNode Text="About Us" Value="About Us" NavigateUrl="~/about us.aspx"></asp:TreeNode>
+                        <asp:TreeNode Text="All About Animals" Value="All About Animals" 
+                            NavigateUrl="~/all about animals.aspx"></asp:TreeNode>
+                        <asp:TreeNode Text="Services Petco Provides" Value="Services Petco Provides" 
+                            NavigateUrl="~/Services.aspx">
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Contact Us" Value="Contact Us" 
+                            NavigateUrl="~/Contact us.aspx"></asp:TreeNode>
+                    </Nodes>
+                    <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" 
+                        HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                </asp:TreeView>
+                <img alt="" src="Images/phone_icon23.jpg" 
+                    
+                    
+                    style="top: 217px; left: 23px; height: 120px; width: 238px; position: absolute" /></td>
+            <td class="style28">
+                <asp:TextBox ID="TextBox3" runat="server" 
+                    
+                    
+                    
+                    style="position: absolute; top: 222px; left: 294px; width: 554px; height: 21px; text-align: left; right: 286px;" 
+                    ontextchanged="TextBox3_TextChanged">Enter Term</asp:TextBox>
+                <asp:Button ID="Button3" runat="server" BackColor="#D5EAFF" 
+                    style="font-weight: 700; position: absolute; top: 220px; left: 862px; width: 95px; height: 26px" 
+                    Text="Search" onclick="Button3_Click" />
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <div style="top: 215px; left: 286px; position: absolute; height: 36px; width: 682px">
+                    </div>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                </asp:ContentPlaceHolder>
+                <asp:Panel ID="Panel1" runat="server" 
+                    style="position: relative; top: 53px; left: -3px; text-align: center">
+                    © Petco Animal Service 2011. All rights Reserved
+                </asp:Panel>
+                <asp:Menu ID="Menu6" runat="server" Orientation="Horizontal" 
+                    
+                    style="position: relative; top: -10px; left: 88px; height: 37px; width: 161px" 
+                    BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" 
+                    Font-Size="0.8em" ForeColor="#7C6F57" StaticSubMenuIndent="10px">
+                    <StaticSelectedStyle BackColor="#5D7B9D" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                    <DynamicMenuStyle BackColor="#F7F6F3" />
+                    <DynamicSelectedStyle BackColor="#5D7B9D" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                    <Items>
+                        <asp:MenuItem Text="PetCo Home" Value="PetCo Home" 
+                            NavigateUrl="~/Home Page.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="About Us" Value="About Us" NavigateUrl="~/about us.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="All about Animals" Value="All about Animals" 
+                            NavigateUrl="~/all about animals.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Service Petco Provides" Value="Service Petco Provides" 
+                            NavigateUrl="~/Services.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Contact Us" Value="Contact Us" 
+                            NavigateUrl="~/Contact us.aspx"></asp:MenuItem>
+                    </Items>
+                    <StaticItemTemplate>
+                        <%# Eval("Text") %> /
+                    </StaticItemTemplate>
+                </asp:Menu>
+            </td>
+            <td bgcolor="#D5EAFF" class="style26">
+                <asp:Login ID="Login1" runat="server" 
+                    
+                    
+                    style="position: absolute; top: 219px; left: 983px; bottom: 218px; height: 125px; width: 225px;">
+                    <LayoutTemplate>
+                        <table border="0" cellpadding="1" cellspacing="0" 
+                            style="border-collapse:collapse;">
+                            <tr>
+                                <td>
+                                    <table border="0" cellpadding="0">
+                                        <tr>
+                                            <td align="center" colspan="2">
+                                                Log In</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">
+                                                <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User 
+                                                Name:</asp:Label>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox ID="UserName" runat="server" Width="126px"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" 
+                                                    ControlToValidate="UserName" ErrorMessage="User Name is required." 
+                                                    ToolTip="User Name is required." ValidationGroup="ctl00$Login1">*</asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">
+                                                <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox ID="Password" runat="server" TextMode="Password" Width="125px"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" 
+                                                    ControlToValidate="Password" ErrorMessage="Password is required." 
+                                                    ToolTip="Password is required." ValidationGroup="ctl00$Login1">*</asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time." />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" colspan="2" style="color:Red;">
+                                                <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" colspan="2">
+                                                <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" 
+                                                    ValidationGroup="ctl00$Login1" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </LayoutTemplate>
+                </asp:Login>
+                <asp:Calendar ID="Calendar1" runat="server" BackColor="White" 
+                    BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" 
+                    DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" 
+                    ForeColor="#003399" Height="200px" 
+                    style="top: 405px; left: 995px; position: absolute; width: 198px;">
+                    <SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                    <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+                    <WeekendDayStyle BackColor="#CCCCFF" />
+                    <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+                    <OtherMonthDayStyle ForeColor="#999999" />
+                    <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
+                    <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
+                    <TitleStyle BackColor="#003399" BorderColor="#3366CC" BorderWidth="1px" 
+                        Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
+                </asp:Calendar>
+            </td>
+        </tr>
+        </table>
+</form>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+</body>
+</html>
